@@ -23,7 +23,10 @@ const NavigationDropdown = () => {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent">
-            <Link className="text-xl" href="/work"> Work</Link>
+            <Link className="text-xl" href="/work">
+              {" "}
+              Work
+            </Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent
             style={{
@@ -38,7 +41,9 @@ const NavigationDropdown = () => {
               style={{ cursor: "pointer" }}
               className="hover:bg-gradient-to-b from-muted/50 to-muted"
             >
-              <Link href="/work#webdevelopment" shallow={true}>Web Development</Link>
+              <Link href="/work#webdevelopment" shallow={true}>
+                Web Development
+              </Link>
             </NavigationMenuLink>
             <NavigationMenuLink
               style={{ cursor: "pointer" }}
@@ -61,7 +66,10 @@ const Header = () => {
       <header className="w-full flex items-center justify-between px-14">
         <Image src={Logo} alt="Aleksandra logo" width={108} height={36} />
         {showMenu ? (
-          <BsFillArrowDownSquareFill size={40} onClick={() => setShowMenu(!showMenu)}/>
+          <BsFillArrowDownSquareFill
+            size={40}
+            onClick={() => setShowMenu(!showMenu)}
+          />
         ) : (
           <GiHamburgerMenu size={40} onClick={() => setShowMenu(!showMenu)} />
         )}
@@ -73,7 +81,7 @@ const Header = () => {
                 About
               </Link>
               <Link href="/work">Work</Link>
-              <Link href='/blog'>Blog</Link>
+              <Link href="/blog">Blog</Link>
               <Link href="/contact" className="hover:bg-muted/50">
                 Contact
               </Link>
@@ -109,7 +117,15 @@ const Header = () => {
           <li>
             <NavigationDropdown />
           </li>
-          <li> <Link href='/blog' className="text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted">Blog</Link></li>
+          <li>
+            {" "}
+            <Link
+              href="/blog"
+              className="text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted"
+            >
+              Blog
+            </Link>
+          </li>
           <li>
             <Link
               href="/contact"
@@ -117,14 +133,16 @@ const Header = () => {
             >
               Contact
             </Link>
-
           </li>
         </ul>
-        <Button
-          variant="secondary"
-          className="flex items-center justify-center gap-2"
-        >
-          <GoDesktopDownload /> Download my CV
+        <Button variant="secondary">
+          <Link
+            className="flex items-center justify-center gap-2"
+            href="https://drive.google.com/file/d/16KmYMY_HxwPdvb2YoKntL98ZUkrniHKV/view?usp=drive_link"
+            target="_blank"
+          >
+            <GoDesktopDownload /> Download my CV
+          </Link>
         </Button>
       </nav>
     </header>
