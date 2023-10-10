@@ -5,6 +5,7 @@ import { TbGraph } from "react-icons/tb";
 import { MdDesignServices, MdReportProblem } from "react-icons/md";
 import { PiProjectorScreenChartFill } from "react-icons/pi";
 import { RiBarChart2Fill, RiTeamFill } from "react-icons/ri";
+import Link from "next/link";
 
 const Expertise = () => {
   return (
@@ -26,23 +27,23 @@ const Expertise = () => {
             <li className=" text-lg p-2 mb-1 rounded">
               <span className="font-bold flex items-center gap-2">
                 <BiSolidLayout /> Web Development:
-              </span>{" "}
+              </span>
               HTML, CSS, JavaScript, TypeScript, Next.js, React.js, Bootstrap,
               Sass, Tailwind CSS, Angular, WordPress, Material UI, Shadcn UI
             </li>
             <li className=" text-lg p-2 mb-1 rounded">
               <span className="font-bold flex items-center gap-2">
-                {" "}
+                
                 <BsDatabaseFillGear />
                 Backend Wizard:
-              </span>{" "}
+              </span>
               Node.js, Express, Databases (MongoDB, SQL), Java, Prisma,
               Mongoose, GraphQL, REST API Development
             </li>
             <li className=" text-lg p-2 mb-1  rounded">
               <span className=" font-bold flex items-center gap-2">
                 <TbGraph /> Graphic Design:
-              </span>{" "}
+              </span>
               Logos, Illustrations, Layouts, Social Media Graphics, PhotoShop,
               Illustrator, Canva
             </li>
@@ -69,7 +70,7 @@ const Expertise = () => {
             Would you like to explore my collection of certificates?
           </p>
           <div className=" flex justify-center mt-3">
-            <Button className="w-[25%] block">View</Button>
+            <Button className="w-[25%] block"><Link href='https://drive.google.com/drive/folders/1tsYYIksMTIFm08olGuXfbZunwIYNSOVX'>View</Link> </Button>
           </div>
         </div>
         <div className="bg-white p-4 rounded-lg shadow-md">
@@ -85,7 +86,6 @@ const Expertise = () => {
 
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
-            {" "}
             <RiBarChart2Fill /> Adaptability
           </h3>
           <p className="text-base">
@@ -97,7 +97,6 @@ const Expertise = () => {
 
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
-            {" "}
             <BiSolidUserCheck /> User-Centric Approach
           </h3>
           <p className="text-base">
@@ -107,7 +106,6 @@ const Expertise = () => {
 
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
-            {" "}
             <MdReportProblem /> Problem-Solving Prowess
           </h3>
           <p className="text-base">
@@ -117,7 +115,6 @@ const Expertise = () => {
 
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
-            {" "}
             <RiTeamFill /> Team Player
           </h3>
           <p className="text-base">
