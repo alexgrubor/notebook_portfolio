@@ -7,14 +7,13 @@ type SectionProps = {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
-  id?:string
+  id?: string;
 };
 
 const Section = ({ children, className, style }: SectionProps) => {
   const ref = useRef<HTMLElement | null>(null);
   const isVisible = useIntersectionObserver(ref);
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
-
   return (
     <section
       ref={ref}
@@ -25,7 +24,7 @@ const Section = ({ children, className, style }: SectionProps) => {
       }`}
       style={{ ...background, ...style }}
     >
-      {!isMobile &&<Lines />}
+      {!isMobile && <Lines />}
       {children}
     </section>
   );

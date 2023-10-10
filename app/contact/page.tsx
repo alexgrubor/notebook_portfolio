@@ -60,7 +60,7 @@ const ContactPage = () => {
     >
       <div className="flex h-[100%] w-[2px] min-h-screen bg-orange-300 absolute top-0 left-[3rem]"></div>
       <div className="flex h-[100%] w-[2px] min-h-screen bg-orange-300 absolute top-0 left-[3.5rem]"></div>
-      <div className="bg-white flex flex-col-reverse lg:flex-row  p-6 justify-center">
+      <div className="bg-white flex flex-col-reverse lg:flex-row  p-6 justify-center mx-auto max-w-screen-lg">
         <div><h1 className="text-4xl">Contact Me</h1>
         <p className="text-lg mb-3">
           If you have any questions or want to get in touch, please fill out the

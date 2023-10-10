@@ -45,6 +45,7 @@ export const projects = [
     github: "https://github.com/alexgrubor/DCIDRINKS",
     technologies: ["React", "React Router", "Axios", "CSS"],
     tags: ["Front-end Development", "API Integration", "React"],
+    url: 'https://alexgrubor.github.io/DCIDRINKS/'
   },
   {
     id: 4,

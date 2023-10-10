@@ -1,9 +1,10 @@
+'use client'
 import { background } from "@/styles/background";
 import Lines from "@/styles/lines";
 const page = () => {
   return (
     <div
-      className="flex min-h-screen flex-col gap-5 px-24 py-4 relative"
+      className="flex min-h-screen  flex-col gap-5 px-24 py-4 relative"
       style={background}
     >
       <Lines />

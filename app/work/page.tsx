@@ -1,15 +1,15 @@
-'use client'
-import { background } from "@/styles/background";
+"use client";
 import ProjectCard from "@/components/shared/ProjectCard";
 import { projects } from "@/public/projects/projets";
 import GraphicDesignCard from "@/components/shared/GraphicDesignCard";
 import { designProject } from "@/public/graphicdesing/designProject";
 import Section from "@/components/shared/Section";
 
+
 const page = () => {
   return (
-    <Section style={{marginTop: '20px', marginBottom: '20px'}}>
-      <div className="flex flex-col lg:flex-row gap-[7rem] items-center pl-3 mb-6">
+    <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
+      <div className="flex flex-col lg:flex-row gap-[7rem] items-center pl-3 mb-6 mx-auto max-w-screen-lg">
         <h1
           className="text-6xl font-bold w-[300px] "
           style={{
@@ -32,7 +32,7 @@ const page = () => {
         </div>
       </div>
 
-      <section id="webdevelopment">
+      <section className="mx-auto max-w-screen-lg" id="webdevelopment">
         <h2 className="p-4 text-3xl text-center">Web development</h2>
         <div className="flex flex-wrap justify-center gap-5 ">
           {projects.map((project) => (
@@ -50,7 +50,7 @@ const page = () => {
           ))}
         </div>
       </section>
-       <section id="graphicdesign" className="flex flex-col">
+      <section className="mx-auto max-w-screen-lg" id="graphicdesign">
         <h2 className="p-4 text-3xl text-center">Graphic design</h2>
         <div className="flex flex-wrap justify-center gap-5">
           {designProject.map((project) => (
@@ -63,7 +63,7 @@ const page = () => {
             />
           ))}
         </div>
-      </section> 
+      </section>
     </Section>
   );
 };
