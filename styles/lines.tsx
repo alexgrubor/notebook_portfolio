@@ -1,6 +1,9 @@
+'use client'
 import { useMediaQuery } from "react-responsive";
 const Lines = () => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+ 
+  
   if (isDesktop) {
     return (
       <>

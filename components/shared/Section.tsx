@@ -17,14 +17,20 @@ const Section = ({ children, className, style }: SectionProps) => {
   return (
     <section
       ref={ref}
-      className={`${isMobile ? '0': 'mx-auto'} ${
+      className={`${isMobile ? "0" : "mx-auto"} ${
         isMobile ? "w-90" : "max-w-[80%] w-[75%]"
       } p-4 border border-gray-500  min-h-screen   bg-white relative ${
         isVisible ? "fade-in" : "fade-out"
       }`}
       style={{ ...background, ...style }}
     >
-      {!isMobile && <Lines />}
+      {!isMobile && (
+        <>
+          <div className="flex h-[100%] w-[2px] min-h-screen bg-orange-300 absolute top-0 left-[3rem]"></div>
+          <div className="flex h-[100%] w-[2px] min-h-screen bg-orange-300 absolute top-0 left-[3.5rem]"></div>
+        </>
+      )}
+
       {children}
     </section>
   );
