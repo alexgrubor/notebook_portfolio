@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import ScrollProgress from "@/components/ui/scrollProgress";
+import { ThemeProvider } from "@/provider/themeprovider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,11 +27,18 @@ export default function RootLayout({
           overflowX: "hidden",
         }}
       >
-        <ScrollProgress />
-        <Header />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ScrollProgress />
+          <Header />
 
-        {children}
-        <Footer />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

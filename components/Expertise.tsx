@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Expertise = () => {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container text-black mx-auto p-6">
       <h2 className="text-3xl font-extrabold pt-4 font-serif text-center">
         The Palette of Expertise
       </h2>

@@ -17,9 +17,9 @@ const Section = ({ children, className, style }: SectionProps) => {
   return (
     <section
       ref={ref}
-      className={`mx-auto ${
+      className={`${isMobile ? '0': 'mx-auto'} ${
         isMobile ? "w-90" : "max-w-[80%] w-[75%]"
-      } p-4 border border-gray-500  min-h-screen pl-[2rem] lg:pl-[4rem] bg-white relative ${
+      } p-4 border border-gray-500  min-h-screen   bg-white relative ${
         isVisible ? "fade-in" : "fade-out"
       }`}
       style={{ ...background, ...style }}

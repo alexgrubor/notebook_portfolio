@@ -15,9 +15,14 @@ import Page3 from "@/pages/Page3";
 import Page4 from "@/pages/Page4";
 import Page5 from "@/pages/Page5";
 import Page6 from "@/pages/Page6";
+import { useTheme } from 'next-themes';
+import BackToTopButton from "@/components/ui/backToTopButton";
+
+
 
 export default function Home() {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+  const { theme } = useTheme();
   const [text, setText] = useState("");
   const fullText =
     "Greetings, I am Aleksandra, a Full Stack Web Developer and Graphic Designer.";
@@ -61,7 +66,7 @@ export default function Home() {
             width: isMobile ? "100%" : "39%",
           }}
         >
-          <h1 className="text-2xl text-slate-900 font-bold">{text}</h1>
+          <h1 className={`text-2xl ${theme === 'light' ? 'text-slate-900' : 'text-white'}  font-bold`}>{text}</h1>
           <p>
             I am a passionate and creative individual who loves to code and
             design. I have a keen eye for detail and a knack for problem
@@ -119,6 +124,7 @@ export default function Home() {
       <Section style={{ marginBottom: "20px" }} id="contact">
         <Page6 />
       </Section>
+      <BackToTopButton/>
     </div>
   );
 }

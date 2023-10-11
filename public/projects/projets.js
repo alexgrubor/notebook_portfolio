@@ -110,7 +110,7 @@ export const projects = [
       "MongoDB",
       "Socket.io",
     ],
-    tags: ["Full Stack", "Game", "React", "MongoDB", "Socket.io", "Aut"],
+    tags: ["Full Stack", "Game", "React", "MongoDB", "Socket.io", "Auth"],
     url: 'https://uno-5dzs.onrender.com/'
   },
   {

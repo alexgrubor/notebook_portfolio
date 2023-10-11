@@ -6,6 +6,7 @@ import GitHubCalendar from "react-github-calendar";
 import { useMediaQuery } from "react-responsive";
 import Section from "@/components/shared/Section";
 import Container from "@/components/shared/Container";
+import BackToTopButton from "@/components/ui/backToTopButton";
 
 const webDevSkills = [
   {
@@ -107,7 +108,7 @@ const AboutPage = () => {
   return (
     <>
       <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
-        <div className="mx-auto max-w-screen-lg flex  flex-col items-center justify-center py-3 ">
+        <div className="mx-auto max-w-screen-lg flex text-black  flex-col items-center justify-center py-3 ">
           <h1 className="text-6xl font-bold mb-4">Additional Chapter: About</h1>
           <div
             className="flex gap-5 items-center py-2"
@@ -156,7 +157,7 @@ const AboutPage = () => {
         </div>
       </Section>
       <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
-        <div className="mx-auto max-w-screen-lg">
+        <div className="mx-auto max-w-screen-lg text-black">
           <h2 className="text-2xl font-bold">My Dual Expertise</h2>
           <h3 className="text-xl mt-4">Full Stack Web Developer</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
@@ -203,11 +204,11 @@ const AboutPage = () => {
       </Section>
 
       <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
-        <section className="flex justify-center  flex-col items-center gap-3 p-3">
+        <section className="flex justify-center text-black  flex-col items-center gap-3 p-3">
           <p className="bg-lime-400 p-2">My GitHub Commits</p>
           <GitHubCalendar username="alexgrubor" />
         </section>
-        <Container className="mx-auto max-w-screen-lg  flex flex-col gap-2">
+        <Container className="mx-auto max-w-screen-lg text-black flex flex-col gap-2">
           <h2 className="text-xl p-1 bg-yellow-400 font-bold pt-2 font-serif w-fit">
             My Coding Philosophy:
           </h2>
@@ -278,12 +279,12 @@ const AboutPage = () => {
         </Container>
       </Section>
       <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
-        <Container className="mx-auto max-w-screen-lg  flex flex-col gap-2">
+        <Container className="mx-auto max-w-screen-lg text-black  flex flex-col gap-2">
           <h2 className="text-xl font-bold pt-2 border-b-2 font-serif border-black w-fit">
             Passions and Hobbies:
           </h2>
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="bg-yellow-400 text-xl block w-fit p-2 rounded-full">
+            <div className="bg-yellow-400  text-xl block w-fit p-2 rounded-full">
               🎨 Drawing on Graphic Board:
             </div>
             <p>
@@ -335,6 +336,7 @@ const AboutPage = () => {
           </div>
         </Container>
       </Section>
+      <BackToTopButton/>
     </>
   );
 };

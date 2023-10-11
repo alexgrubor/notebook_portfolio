@@ -9,7 +9,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#eee7d7] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-2 border-t-2 border-[#F4F7FA]">
+    <footer className="w-full bg-[#eee7d7] text-black px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-2 border-t-2 border-[#F4F7FA]">
       <div className="flex flex-col sm:flex-row items-center justify-between">
         <div className="mb-4 sm:mb-0">
           <Link href="/">

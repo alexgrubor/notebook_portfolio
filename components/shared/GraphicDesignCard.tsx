@@ -15,8 +15,8 @@ const GraphicDesignCard = ({
   return (
     <div className={className}>
       <Image src={image} alt={title} width={200} height={200} />
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <h2 className="text-2xl">{title}</h2>
+      <p className="text-center text-slate-800 ">{description}</p>
     </div>
   );
 };

@@ -2,7 +2,6 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { Button } from "@/components/ui/button";
 import Animation from "../../public/animation_lmrs07fg_small.gif";
-import { background } from "@/styles/background";
 import Image from "next/image";
 import AleksandraContact from '../../public/AleksandraContact.png'
 import Section from "@/components/shared/Section";
@@ -20,14 +19,14 @@ const ContactFrom = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col p-6 gap-5 shadow-md">
+    <form onSubmit={handleSubmit} className="flex flex-col p-6 gap-5" style={{boxShadow: '5px 5px 15px 5px #FFA03E'}}>
       <label htmlFor="name">Your Full Name</label>
       <input
         id="name"
         type="text"
         name="name"
         required
-        className="border-2 border-gray-400 p-2 outline-none focus:border-black"
+        className="border-2 bg-lime-400 border-gray-400 p-2 outline-none focus:border-black"
       />
       <ValidationError prefix="Name" field="name" errors={state.errors} />
       <label htmlFor="email">Email Address</label>
@@ -36,7 +35,7 @@ const ContactFrom = () => {
         type="email"
         name="email"
         required
-        className="border-2 border-gray-400 p-2 outline-none focus:border-black"
+        className="border-2 border-gray-400 p-2 bg-yellow-400 outline-none focus:border-black"
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <label htmlFor="message">Message</label>
@@ -44,10 +43,10 @@ const ContactFrom = () => {
         id="message"
         name="message"
         required
-        className="border-2 border-gray-400 p-2 outline-none focus:border-black"
+        className="border-2 border-gray-400 bg-pink-400 p-2 outline-none focus:border-black"
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
-      <Button type="submit" disabled={state.submitting}>
+      <Button type="submit" disabled={state.submitting} className="bg-blue-400">
         Submit
       </Button>
     </form>
@@ -58,10 +57,9 @@ const ContactPage = () => {
   return (
     <Section style={{marginTop: '20px', marginBottom: '20px'}}
     >
-      <div className="flex h-[100%] w-[2px] min-h-screen bg-orange-300 absolute top-0 left-[3rem]"></div>
-      <div className="flex h-[100%] w-[2px] min-h-screen bg-orange-300 absolute top-0 left-[3.5rem]"></div>
-      <div className="bg-white flex flex-col-reverse lg:flex-row  p-6 justify-center mx-auto max-w-screen-lg">
-        <div><h1 className="text-4xl">Contact Me</h1>
+  
+      <div className="bg-white flex flex-col-reverse lg:flex-row text-black p-6 justify-center mx-auto max-w-screen-lg">
+        <div className="flex flex-col gap-3"><h1 className="text-4xl">Contact Me</h1>
         <p className="text-lg mb-3">
           If you have any questions or want to get in touch, please fill out the
           form below.

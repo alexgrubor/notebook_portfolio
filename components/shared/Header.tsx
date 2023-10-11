@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { BsFillArrowDownSquareFill } from "react-icons/bs";
-
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
 import {
   NavigationMenu,
@@ -17,6 +17,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { ModeToggle } from "../ui/toogleButton";
+
 const NavigationDropdown = () => {
   return (
     <NavigationMenu>
@@ -61,6 +63,9 @@ const NavigationDropdown = () => {
 const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   const [showMenu, setShowMenu] = useState(false);
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
   if (isMobile) {
     return (
       <header className="w-full flex items-center justify-between px-14">
@@ -73,27 +78,41 @@ const Header = () => {
         ) : (
           <GiHamburgerMenu size={40} onClick={() => setShowMenu(!showMenu)} />
         )}
-
-        {showMenu && (
-          <div className="absolute top-[7rem] right-10 bg-white shadow-lg z-10 p-5">
-            <nav className="flex flex-col justify-center gap-y-4">
-              <Link href="/about" className="hover:bg-muted/50">
-                About
-              </Link>
-              <Link href="/work">Work</Link>
-              <Link href="/blog">Blog</Link>
-              <Link href="/contact" className="hover:bg-muted/50">
-                Contact
-              </Link>
-              <Button
-                variant="secondary"
-                className="flex items-center justify-center gap-2"
-              >
-                <GoDesktopDownload /> Download my CV
-              </Button>
-            </nav>
-          </div>
-        )}
+        <AnimatePresence>
+          {showMenu && (
+            <motion.div
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+              className="absolute top-[7rem] right-10 bg-white shadow-lg z-10 p-5"
+            >
+              <nav className="flex flex-col justify-center gap-y-4">
+                <button onClick={closeMenu}>
+                  <Link href="/about" className="hover:bg-muted/50">
+                    About
+                  </Link>
+                </button>
+                <button onClick={closeMenu}>
+                  <Link href="/work">Work</Link>
+                </button>
+                <button onClick={closeMenu}>
+                  <Link href="/blog">Blog</Link>
+                </button>
+                <button onClick={closeMenu}>
+                  <Link href="/contact" className="hover:bg-muted/50">
+                    Contact
+                  </Link>
+                </button>
+                <Button
+                  variant="secondary"
+                  className="flex items-center justify-center gap-2"
+                >
+                  <GoDesktopDownload /> Download my CV
+                </Button>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
     );
   }
@@ -105,7 +124,7 @@ const Header = () => {
             <Image src={Logo} alt="Aleksandra logo" width={108} height={36} />
           </Link>
         </div>
-        <ul className="flex items-center gap-x-4">
+        <ul className="text-black flex items-center gap-x-4">
           <li>
             <Link
               href="/about"
@@ -118,7 +137,6 @@ const Header = () => {
             <NavigationDropdown />
           </li>
           <li>
-            {" "}
             <Link
               href="/blog"
               className="text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted"
@@ -144,6 +162,7 @@ const Header = () => {
             <GoDesktopDownload /> Download my CV
           </Link>
         </Button>
+        <ModeToggle />
       </nav>
     </header>
   );

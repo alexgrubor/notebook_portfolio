@@ -19,8 +19,8 @@ const Page3 = () => {
         Welcome to Portfolio page of my digital notebook, where you will find a
         glimpse of my portfolio and the projects I have worked on.
       </p>
-      <div className="flex justify-center flex-wrap gap-3 my-3">
-      <h3>Web Development</h3>
+      <div className="flex justify-center mx-auto  flex-wrap gap-3 my-3">
+      <h3 className="text-4xl font-bold pt-8 text-center text-purple-700">Web Development</h3>
         <div className="flex flex-wrap gap-3 justify-center">
         
           <ProjectCard
@@ -55,9 +55,19 @@ const Page3 = () => {
             color="yellow"
             url={projects[7].url}
           />
+           <ProjectCard
+            title={projects[11].name}
+            description={projects[11].description}
+            technologies={projects[11].technologies}
+            image={projects[11].image}
+            github={projects[11].github}
+            tags={projects[11].tags}
+            color="lime"
+            url={projects[11].url}
+          />
         </div>
      <div>
-      <h3 className="text-center">Graphic Design</h3>
+      <h3 className="text-4xl mb-3 font-bold pt-8 text-center text-purple-700">Graphic Design</h3>
         <div className="flex flex-wrap gap-3 justify-center">
          
           <GraphicDesignCard
@@ -88,7 +98,7 @@ const Page3 = () => {
         Ready to explore more?
       </p>
       <div className="flex justify-center items-center flex-col gap-2">
-        <Button>
+        <Button className="my-3">
           <Link href="/work">See more of my work</Link>
         </Button>
 
