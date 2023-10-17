@@ -9,12 +9,9 @@ import Section from "@/components/shared/Section";
 const page = () => {
   return (
     <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
-      <div className="flex flex-col lg:flex-row gap-[7rem] items-center pl-3 mb-6 mx-auto max-w-screen-lg">
+      <div className="flex flex-col  gap-[4rem] items-center pl-3 mb-6 mx-auto max-w-screen-lg">
         <h1
-          className="text-6xl font-bold w-[300px] "
-          style={{
-            borderBottom: "2px solid black",
-          }}
+          className="text-6xl font-bold mt-4  textAnimation "
         >
           Additional Chapter: My Work
         </h1>

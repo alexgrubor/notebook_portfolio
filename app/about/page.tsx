@@ -109,7 +109,7 @@ const AboutPage = () => {
     <>
       <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
         <div className="mx-auto max-w-screen-lg flex text-black  flex-col items-center justify-center py-3 ">
-          <h1 className="text-6xl font-bold mb-4">Additional Chapter: About</h1>
+          <h1 className="text-6xl font-bold mb-4 textAnimation">Additional Chapter: About</h1>
           <div
             className="flex gap-5 items-center py-2"
             style={{

@@ -2,7 +2,7 @@ import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import { useMediaQuery } from "react-responsive";
 import { useRef } from "react";
 import { background } from "@/styles/background";
-import Lines from "@/styles/lines";
+
 type SectionProps = {
   children: React.ReactNode;
   className?: string;
@@ -22,7 +22,7 @@ const Section = ({ children, className, style }: SectionProps) => {
       } p-4 border border-gray-500  min-h-screen   bg-white relative ${
         isVisible ? "fade-in" : "fade-out"
       }`}
-      style={{ ...background, ...style }}
+      style={{ scrollSnapAlign:'center' ,...background, ...style }}
     >
       {!isMobile && (
         <>

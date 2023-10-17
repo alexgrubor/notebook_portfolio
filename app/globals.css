@@ -75,23 +75,8 @@
   }
 }
 
-.preloader-container {
-  position: fixed;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at 40% 40%, #02010b 25%, transparent 26%),
-    radial-gradient(circle at 60% 60%, #02010b80 25%, transparent 26%);
-  background-size: 3em 3em;
-  background-color: #ffffff;
-  opacity: 1;
-  transition: right 1s ease;
-}
+
+
 
 .loading {
   right: 0;
@@ -107,6 +92,43 @@
   transform-origin: 0%;
   z-index: 10;
 }
+/* styles.module.css */
+
+@keyframes textClipAnimation {
+  0% {
+      background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(90deg, #68D391, #F6E05E, #3B82F6, #F472B6);
+      background-size: 400% 100%;
+      background-position: 0% 0%;
+  }
+  25% {
+      background-position: 100% 0%;
+  }
+  50% {
+      background-position: 100% 0%;
+  }
+  75% {
+      background-position: 200% 0%;
+  }
+  100% {
+      background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(90deg, #68D391, #F6E05E, #3B82F6, #F472B6);
+      background-size: 400% 100%;
+      background-position: -300% 0%;
+  }
+}
+
+.textAnimation {
+  font-size: 6rem;
+  font-weight: bold;
+  animation: textClipAnimation 10s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
@@ -129,5 +151,10 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@media (max-width: 640px) {
+  .textAnimation {
+      font-size: 3rem;
   }
 }
