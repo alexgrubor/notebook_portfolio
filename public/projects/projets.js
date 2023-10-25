@@ -137,7 +137,7 @@ export const projects = [
     id: 11,
     name: "E-commerce Store",
     description:
-      "Welcome to the E-Commerce CMS Store Site repository! This is a feature-rich web application meticulously crafted to provide users with a seamless shopping experience. It boasts eye-catching billboards, a meticulously organized category system, and a carefully curated selection of featured products. Shoppers can effortlessly browse, add items to their cart, and securely complete their purchases, all in one place.",
+      "Welcome to the E-Commerce CMS Store Site repository! This is a feature-rich web application crafted to provide users with a seamless shopping experience. It boasts eye-catching billboards, a meticulously organized category system, and a carefully curated selection of featured products. Shoppers can effortlessly browse, add items to their cart, and securely complete their purchases, all in one place.",
     image: EcomStore,
     github: "https://github.com/alexgrubor/ecomstore_storesite",
     technologies: [

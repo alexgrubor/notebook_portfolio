@@ -6,23 +6,25 @@ import { MdDesignServices, MdReportProblem } from "react-icons/md";
 import { PiProjectorScreenChartFill } from "react-icons/pi";
 import { RiBarChart2Fill, RiTeamFill } from "react-icons/ri";
 import Link from "next/link";
+import DecoSquares from "./shared/DecoSquares";
 
 const Expertise = () => {
   return (
-    <div className="container text-black mx-auto p-6">
-      <h2 className="text-3xl font-extrabold pt-4 font-serif text-center">
+    <div className=" text-black mx-auto p-6">
+      <h2 className="text-4xl font-bold pt-8 text-center text-purple-700">
         The Palette of Expertise
       </h2>
+      <div className="flex justify-center my-1 gap-2">
+        <DecoSquares />
+        <DecoSquares />
+      </div>
       <p className="text-lg bg-pink-400 w-fit p-2 mx-auto mt-4 text-center">
-        Welcome to Page 2 of my digital notebook, where you will find a glimpse
-        of the tools in my creative arsenal and the skills I bring to the table.
-      </p>
-      <p className="text-base text-center mt-3">
         Just like an artist has a palette of colors, I have a diverse palette of
         skills:
       </p>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md shadow-yellow-400">
           <ul className="mt-2">
             <li className=" text-lg p-2 mb-1 rounded">
               <span className="font-bold flex items-center gap-2">
@@ -33,7 +35,6 @@ const Expertise = () => {
             </li>
             <li className=" text-lg p-2 mb-1 rounded">
               <span className="font-bold flex items-center gap-2">
-                
                 <BsDatabaseFillGear />
                 Backend Wizard:
               </span>
@@ -49,7 +50,7 @@ const Expertise = () => {
             </li>
           </ul>
         </div>
-        <div className="bg-white p-4 rounded-lg shadow-md flex flex-col gap-2">
+        <div className="bg-white p-4 rounded-lg shadow-md flex flex-col gap-2 shadow-pink-400">
           <h3 className="text-2xl mb-2 text-center flex items-center justify-center gap-2">
             <BiSolidBook /> Eager Learner
           </h3>
@@ -70,10 +71,14 @@ const Expertise = () => {
             Would you like to explore my collection of certificates?
           </p>
           <div className=" flex justify-center mt-3">
-            <Button className="w-[25%] block"><Link href='https://drive.google.com/drive/folders/1tsYYIksMTIFm08olGuXfbZunwIYNSOVX'>View</Link> </Button>
+            <Button className="w-[25%] block">
+              <Link href="https://drive.google.com/drive/folders/1tsYYIksMTIFm08olGuXfbZunwIYNSOVX">
+                View
+              </Link>{" "}
+            </Button>
           </div>
         </div>
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md shadow-lime-400">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
             <MdDesignServices /> Design Enchantment
           </h3>
@@ -84,7 +89,7 @@ const Expertise = () => {
           </p>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md shadow-purple-400">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
             <RiBarChart2Fill /> Adaptability
           </h3>
@@ -95,7 +100,7 @@ const Expertise = () => {
           </p>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md shadow-blue-400">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
             <BiSolidUserCheck /> User-Centric Approach
           </h3>
@@ -104,7 +109,7 @@ const Expertise = () => {
           </p>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md shadow-yellow-400">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
             <MdReportProblem /> Problem-Solving Prowess
           </h3>
@@ -113,7 +118,7 @@ const Expertise = () => {
           </p>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md shadow-pink-400">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
             <RiTeamFill /> Team Player
           </h3>
@@ -123,13 +128,13 @@ const Expertise = () => {
           </p>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="bg-white p-4 rounded-lg shadow-md shadow-green-400">
           <h3 className="text-2xl mb-2 text-center flex justify-center items-center gap-2">
             <PiProjectorScreenChartFill /> Project Management
           </h3>
           <p className="text-base">
-            Managing projects from start to finish using tools like Trello,Git Projects, Asana and
-            Jira.
+            Managing projects from start to finish using tools like Trello,Git
+            Projects, Asana and Jira.
           </p>
         </div>
       </div>

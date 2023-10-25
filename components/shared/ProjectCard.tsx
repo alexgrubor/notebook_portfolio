@@ -53,7 +53,7 @@ const ProjectCard = ({
         <p className="mt-4">
           {showFullDescription ? description : description.slice(0, 100)}
         </p>
-        {description.length > 100 && (
+        {description.length > 120 && (
           <div>
             <button
               className="hover:underline"

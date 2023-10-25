@@ -8,17 +8,17 @@ const ContactForm = () => {
     const [state, handleSubmit] = useForm("xvojwryq");
     if (state.succeeded) {
       return (
-        <div className="flex flex-col justify-center items-center bg-neutral-300">
+        <div className="flex flex-col gap-4 justify-center items-center rounded-lg">
           <Image src={Animation} alt="Send animation" width={200} height={200} />
-          <p>
-            Thanks for contacting me! I will be back at you as soon as possible
+          <p className="max-w-[200px]">
+            Thanks for contacting me! I will be back at you as soon as possible!
           </p>
         </div>
       );
     }
   
     return (
-      <form onSubmit={handleSubmit} className="flex flex-col bg-lime-400 p-6 gap-5 shadow-md" >
+      <form onSubmit={handleSubmit} className="flex flex-col rounded-md bg-lime-400 p-6 gap-5 shadow-md" >
         <label htmlFor="name">Your Full Name</label>
         <input
           id="name"
