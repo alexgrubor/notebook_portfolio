@@ -103,11 +103,14 @@ const Header = () => {
                     Contact
                   </Link>
                 </button>
-                <Button
-                  variant="secondary"
-                  className="flex items-center justify-center gap-2"
-                >
-                  <GoDesktopDownload /> Download my CV
+                <Button variant="secondary">
+                  <Link
+                    className="flex items-center justify-center gap-2"
+                    href="https://drive.google.com/file/d/1TrcCbSsRqSY4eRcBckIKd2H88-tjwesC/view?usp=sharing"
+                    target="_blank"
+                  >
+                    <GoDesktopDownload /> Download my CV
+                  </Link>
                 </Button>
               </nav>
             </motion.div>
@@ -156,7 +159,7 @@ const Header = () => {
         <Button variant="secondary">
           <Link
             className="flex items-center justify-center gap-2"
-            href="https://drive.google.com/file/d/16KmYMY_HxwPdvb2YoKntL98ZUkrniHKV/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1TrcCbSsRqSY4eRcBckIKd2H88-tjwesC/view?usp=sharing"
             target="_blank"
           >
             <GoDesktopDownload /> Download my CV
