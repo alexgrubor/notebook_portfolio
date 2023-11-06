@@ -3,7 +3,7 @@ import Container from "@/components/shared/Container";
 import ProjectCard from "@/components/shared/ProjectCard";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { designProject } from "@/public/graphicdesing/designProject";
+import { designProjects } from "@/public/graphicdesing/designProject";
 import GraphicDesignCard from "@/components/shared/GraphicDesignCard";
 import DecoSquares from "@/components/shared/DecoSquares";
 
@@ -74,26 +74,32 @@ const Page3 = () => {
           <h3 className="text-4xl mb-3 font-bold pt-8 text-center text-purple-700">
             Graphic Design
           </h3>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-3  justify-center">
             <GraphicDesignCard
-              title={designProject[2].title}
-              description={designProject[2].description}
-              image={designProject[2].img}
-              className="flex flex-col gap-2 justify-evenly items-center bg-pink-400 p-4 shadow-lg max-h-[450px] w-[250px] overflow-hidden"
+              title={designProjects[3].title}
+              description={designProjects[3].description}
+              image={designProjects[3].image}
+              category={designProjects[3].category}
             />
 
             <GraphicDesignCard
-              title={designProject[4].title}
-              description={designProject[4].description}
-              image={designProject[4].img}
-              className="flex flex-col gap-2 justify-evenly items-center bg-lime-400 p-4 shadow-lg max-h-[450px] w-[250px] overflow-hidden"
+              title={designProjects[4].title}
+              description={designProjects[4].description}
+              image={designProjects[4].image}
+              category={designProjects[4].category}
             />
 
             <GraphicDesignCard
-              title={designProject[5].title}
-              description={designProject[5].description}
-              image={designProject[5].img}
-              className="flex flex-col gap-2 justify-evenly items-center bg-blue-400 p-4 shadow-lg max-h-[450px] w-[250px] overflow-hidden"
+              title={designProjects[5].title}
+              description={designProjects[5].description}
+              image={designProjects[5].image}
+              category={designProjects[5].category}
+            />
+            <GraphicDesignCard
+              title={designProjects[1].title}
+              description={designProjects[1].description}
+              image={designProjects[1].image}
+              category={designProjects[1].category}
             />
           </div>
         </div>

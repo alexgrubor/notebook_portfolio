@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProjectCard from "@/components/shared/ProjectCard";
 import { projects } from "@/public/projects/projets";
 import GraphicDesignCard from "@/components/shared/GraphicDesignCard";
-import { designProject } from "@/public/graphicdesing/designProject";
+import { designProjects } from "@/public/graphicdesing/designProject";
 import Section from "@/components/shared/Section";
 
 const WorkPage = () => {
@@ -118,13 +118,13 @@ const WorkPage = () => {
       <section className="mx-auto max-w-screen-lg text-black" id="graphicdesign">
         <h2 className="p-4 text-3xl text-center">Graphic design</h2>
         <div className="flex flex-wrap justify-center gap-5">
-          {designProject.map((project) => (
+          {designProjects.map((project) => (
             <GraphicDesignCard
               key={project.id}
               title={project.title}
               description={project.description}
-              image={project.img}
-              className="flex flex-col gap-2 justify-evenly items-center bg-lime-400 p-4 shadow-lg max-h-[650px] w-[250px] overflow-hidden"
+              image={project.image}
+              category={project.category}
             />
           ))}
         </div>
