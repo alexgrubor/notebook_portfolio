@@ -34,7 +34,7 @@ const NavigationDropdown = ({ path }: NavigationDropdownIf) => {
               className={
                 path === "/work"
                   ? "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted border-b-2 border-purple-600"
-                  : "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted"
+                  : "text-xl p-3"
               }
               href="/work"
             >
