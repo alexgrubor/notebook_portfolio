@@ -14,6 +14,8 @@ const Section = ({ children, className, style }: SectionProps) => {
   const ref = useRef<HTMLElement | null>(null);
   const isVisible = useIntersectionObserver(ref);
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1565px)" });
+
   return (
     <section
       ref={ref}
@@ -22,9 +24,9 @@ const Section = ({ children, className, style }: SectionProps) => {
       } p-4 border border-gray-500  min-h-screen   bg-white relative ${
         isVisible ? "fade-in" : "fade-out"
       }`}
-      style={{ scrollSnapAlign:'center' ,...background, ...style }}
+      style={{ scrollSnapAlign: "center", ...background, ...style }}
     >
-      {!isMobile && (
+      {isDesktop && (
         <>
           <div className="flex h-[100%] w-[2px] min-h-screen bg-orange-300 absolute top-0 left-[3rem]"></div>
           <div className="flex h-[100%] w-[2px] min-h-screen bg-orange-300 absolute top-0 left-[3.5rem]"></div>
