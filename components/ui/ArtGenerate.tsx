@@ -1,9 +1,10 @@
 import { useState } from "react";
-
-
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 const ArtGenerate = () => {
   const [elements, setElements] = useState(generateArt());
-  
+
+  const [animate, setAnimate] = useAutoAnimate();
+
   function generateArt() {
     const art = [];
     for (let i = 0; i < 49; i++) {
@@ -16,7 +17,9 @@ const ArtGenerate = () => {
             backgroundColor: getRandomColor(),
             display: "block",
             border: "2px solid black",
+            transition: "background-color 0.5s", // Add a transition property
           }}
+          onAnimationEnd={() => setAnimate(false)} // Set animate to false after animation ends
         ></span>
       );
     }
@@ -28,8 +31,10 @@ const ArtGenerate = () => {
   }
 
   const regenerateArt = () => {
+    setAnimate(true); // Trigger the auto-animate by setting animate to true
     setElements(generateArt());
   };
+
   return (
     <div className="bg-white w-[400px] p-8 text-center">
       <div className={`mb-4 flex gap-2 justify-center flex-wrap`}>
