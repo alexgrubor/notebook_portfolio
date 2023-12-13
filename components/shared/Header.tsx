@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "../../public/Aleksandra-logo.webp";
 import { GoDesktopDownload } from "react-icons/go";
 import { useMediaQuery } from "react-responsive";
@@ -19,14 +20,24 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "../ui/toogleButton";
 
-const NavigationDropdown = () => {
+interface NavigationDropdownIf {
+  path: string | null;
+}
+
+const NavigationDropdown = ({ path }: NavigationDropdownIf) => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent">
-            <Link className="text-xl" href="/work">
-              {" "}
+            <Link
+              className={
+                path === "/work"
+                  ? "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted border-b-2 border-purple-600"
+                  : "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted"
+              }
+              href="/work"
+            >
               Work
             </Link>
           </NavigationMenuTrigger>
@@ -66,6 +77,8 @@ const Header = () => {
   const closeMenu = () => {
     setShowMenu(false);
   };
+  const pathName = usePathname();
+
   if (isMobile) {
     return (
       <header className="w-full flex items-center justify-between px-14">
@@ -131,18 +144,26 @@ const Header = () => {
           <li>
             <Link
               href="/about"
-              className="text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted "
+              className={
+                pathName === "/about"
+                  ? "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted border-b-2 border-purple-600"
+                  : "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted"
+              }
             >
               About
             </Link>
           </li>
           <li>
-            <NavigationDropdown />
+            <NavigationDropdown path={pathName} />
           </li>
           <li>
             <Link
               href="/blog"
-              className="text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted"
+              className={
+                pathName === "/blog"
+                  ? "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted border-b-2 border-purple-600"
+                  : "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted"
+              }
             >
               Blog
             </Link>
@@ -150,7 +171,11 @@ const Header = () => {
           <li>
             <Link
               href="/contact"
-              className="text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted "
+              className={
+                pathName === "/contact"
+                  ? "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted border-b-2 border-purple-600"
+                  : "text-xl p-3 hover:bg-gradient-to-b from-muted/50 to-muted"
+              }
             >
               Contact
             </Link>
