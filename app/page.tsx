@@ -26,7 +26,7 @@ export default function Home() {
     { title: "A Glimpse into My Portfolio", content: <Page3 /> },
     { title: " The Alchemy of Creativity", content: <Page4 /> },
     { title: "Learning and Collaborative Chronicles", content: <Page5 /> },
-    { title: "Let`'s Connect", content: <Page6 /> },
+    { title: "Embark on This Connection with Me", content: <Page6 /> },
   ];
   const [motionSectionLoaded, setMotionSectionLoaded] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
@@ -104,10 +104,7 @@ export default function Home() {
             }}
           >
             <PiArrowFatLineDownDuotone />
-            <Link
-              href="#start"
-              className="duration-1000 ease-in-out"
-            >
+            <Link href="#start" className="duration-1000 ease-in-out">
               Read My Notebook
             </Link>
           </Button>
@@ -119,17 +116,17 @@ export default function Home() {
 
       {!isMobile && motionSectionLoaded && (
         <div
-          className="min-h-screen max-w-[80%] w-[75%] mx-auto flex flex-col lg:flex-row justify-start my-2 mb-7 "
+          className="min-h-screen max-w-[80%] w-[75%] mx-auto flex flex-col lg:flex-row justify-start  my-2 mb-7 "
           id="start"
         >
-          <ul className="flex flex-col gap-3 w-1/4 bg-[#eee7d7] text-black p-3">
+          <ul className="flex flex-col gap-3 w-48 bg-[#eee7d7] text-black p-3">
             <p className="font-bold text-lg">Notebook Content</p>
             {tabs.map((tab, index) => (
               <li key={index}>
                 <button
-                  className={` ${
-                    activeTab === index + 1 ? "text-purple-600" : ""
-                  } ${activeTab === index + 1 ? "px-2" : ""}`}
+                  className={`${
+                    activeTab === index + 1 ? "text-purple-600 px-3" : "pl-3"
+                  }`}
                   onClick={() => setActiveTab(index + 1)}
                 >
                   {tab.title}
@@ -138,7 +135,7 @@ export default function Home() {
             ))}
           </ul>
           <div
-            className="w-3/4 bg-white"
+            className="w-3/4 bg-white p-4"
             style={{
               border: "2px solid #a9a9a9",
               borderLeft: "1px solid #d3d3d3",
