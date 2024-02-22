@@ -17,6 +17,7 @@ import BackToTopButton from "@/components/ui/backToTopButton";
 import ArtGenerate from "@/components/ui/ArtGenerate";
 import DecoSquares from "@/components/shared/DecoSquares";
 import LoadingSpiner from "@/components/ui/LoadingSpiner";
+import AnimatedCircle from "@/components/ui/AnimatedCircle";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(1);
@@ -113,7 +114,7 @@ export default function Home() {
           <ArtGenerate />
         </div>
       </motion.section>
-
+  <AnimatedCircle />  
       {!isMobile && motionSectionLoaded && (
         <div
           className="min-h-screen max-w-[80%] w-[75%] mx-auto flex flex-col lg:flex-row justify-start  my-2 mb-7 "

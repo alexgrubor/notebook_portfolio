@@ -7,6 +7,8 @@ import { useMediaQuery } from "react-responsive";
 import Section from "@/components/shared/Section";
 import Container from "@/components/shared/Container";
 import BackToTopButton from "@/components/ui/backToTopButton";
+import AnimatedCircle from "@/components/ui/AnimatedCircle";
+
 
 const webDevSkills = [
   {
@@ -107,6 +109,7 @@ const AboutPage = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   return (
     <>
+    <AnimatedCircle/>
       <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
         <div className="mx-auto max-w-screen-lg flex text-black  flex-col items-center justify-center py-3 ">
           <h1 className="text-6xl font-bold mb-4 textAnimation">Additional Chapter: About</h1>

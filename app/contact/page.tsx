@@ -5,6 +5,8 @@ import Animation from "../../public/animation_lmrs07fg_small.gif";
 import Image from "next/image";
 import AleksandraContact from '../../public/AleksandraContact.png'
 import Section from "@/components/shared/Section";
+import AnimatedCircle from "@/components/ui/AnimatedCircle";
+
 const ContactFrom = () => {
   const [state, handleSubmit] = useForm("xvojwryq");
   if (state.succeeded) {
@@ -57,7 +59,7 @@ const ContactPage = () => {
   return (
     <Section style={{marginTop: '20px', marginBottom: '20px'}}
     >
-  
+      <AnimatedCircle />
       <div className="bg-white flex flex-col-reverse lg:flex-row text-black p-6 justify-center mx-auto max-w-screen-lg">
         <div className="flex flex-col gap-3"><h1 className="text-4xl">Contact Me</h1>
         <p className="text-lg mb-3">

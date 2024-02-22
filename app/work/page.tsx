@@ -5,6 +5,7 @@ import { projects } from "@/public/projects/projets";
 import GraphicDesignCard from "@/components/shared/GraphicDesignCard";
 import { designProjects } from "@/public/graphicdesing/designProject";
 import Section from "@/components/shared/Section";
+import AnimatedCircle from "@/components/ui/AnimatedCircle";
 
 const WorkPage = () => {
   const [selectedTechnology, setSelectedTechnology] = useState<string | null>(
@@ -36,6 +37,7 @@ const WorkPage = () => {
 
   return (
     <Section style={{ marginTop: "20px", marginBottom: "20px" }}>
+      <AnimatedCircle/>
       <div className="flex flex-col  gap-[4rem]  items-center pl-3 mb-6 mx-auto max-w-screen-lg">
         <h1 className="text-6xl font-bold mt-4  textAnimation ">
           Additional Chapter: My Work
